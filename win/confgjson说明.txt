@@ -1,0 +1,51 @@
+pi和win双端都得放一个，和py文件同目录。
+为什么是confg不是config，因为懒得改了（（
+
+{
+    "device_input_index": 1, 
+    "?1": "代表输入硬件设备的编号，通过sounddevice库的query查看",
+    "device_output_index": 5, 
+    "?2": "代表uuiu硬件设备的编号，通过sounddevice库的query查看",
+    "abs_path": "S:/Code/LangChain", 
+    "?3": "代表win端提示音文件的绝对路径",
+    "snowboy_hotwords":{
+        "path": "hotwords",
+        "sensitivity": 0.45
+    },
+    "?4": "代表snowboy唤醒词路径和唤醒敏感度，越大越容易唤醒，过大会乱检测，推荐0.5以内",
+    "sherpa-ncnn":{
+        "path": "./sherpa-ncnn-conv-emformer-transducer-2022-12-06/",
+        "rule1": 2.5,
+        "rule2": 1.2,
+        "rule3": 300
+    },
+    "?5": "sherpa-ncnn的配置，参考https://k2-fsa.github.io/sherpa/ncnn/endpoint.html",
+    "proxy":"http://111.111.111.111:0000",
+    "?6": "openai代理服务器的地址，上面乱写的，请自己搭建",
+    "self_IP":"111.111.111.111",
+    "self_PORT": 1111,
+    "?7": "树莓派IP地址和端口",
+    "openai":{
+        "key":"11111",
+        "prompt":"【这里是初始设定】",
+        "greet":"【初始化时给ai打个招呼】"
+    },
+    "?8": "openai的一些配置",
+    "azure":{
+        "name":"zh-CN-XiaoyiNeural",
+        "leading_silence":"50ms",
+        "pitch":"+10.00%",
+        "volume":"+00.00%",
+        "speech_key":"1111",
+        "speech_region":"1111",
+        "speech_endpoint":"1111"
+    },
+    "?9": "微软TTS的一些配置，包括朗读人、开头静默时长、音调增益、音高增益、以及key啥的，需要自己搭服务，语速自适应",
+    "sound_files":
+    {
+        "start":"like.wav",
+        "stop":"ding.wav",
+        "initial":"initial.wav"
+    },
+    "?10": "开始录音的提示音、录音完成的提示音、初始化中的提示音"
+}
